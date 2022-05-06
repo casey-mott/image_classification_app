@@ -31,7 +31,7 @@ def upload():
         img = img - [123.68, 116.779, 103.939]
 
         #model = pickle.load(open('model/demo_model.pkl', 'rb'))
-        model = load_model('model/demo_model.h5')
+        model = load_model('model/updated_model.h5')
         result_raw = model.predict(img)
         if result_raw[0][0] == 1.0:
             result = 'DOG'
